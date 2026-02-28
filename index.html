@@ -517,26 +517,25 @@
                     <h3>Оставьте заявку</h3>
                     <p>Мы перезвоним в течение 15 минут</p>
                     
-                    <form>
+                    <form action="https://p23132pj.beget.tech/send.php" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="text" name="name" placeholder="Ваше имя" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Ваш телефон" required>
+                            <input type="tel" name="phone" placeholder="Ваш телефон" required>
                         </div>
                         <div class="form-group">
-                            <select>
-                                <option>Выберите тип устройства</option>
-                                <option>Телефон</option>
-                                <option>Ноутбук</option>
-                                <option>Планшет</option>
-                                <option>Телевизор</option>
-                                <option>Приставка</option>
-                                <option>Другое</option>
+                            <select name="device">
+                                <option value="Телефон">Телефон</option>
+                                <option value="Ноутбук">Ноутбук</option>
+                                <option value="Планшет">Планшет</option>
+                                <option value="Телевизор">Телевизор</option>
+                                <option value="Приставка">Приставка</option>
+                                <option value="Другое">Другое</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Опишите проблему..."></textarea>
+                            <textarea name="problem" placeholder="Опишите проблему..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-large" style="width: 100%;">Отправить заявку</button>
                     </form>
