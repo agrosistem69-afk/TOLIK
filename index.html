@@ -34,6 +34,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 10px 20px;
         }
         
         .logo {
@@ -41,17 +42,25 @@
             font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
         }
         
         .logo span {
             font-size: 2rem;
+            line-height: 1;
+        }
+        
+        .logo div {
+            display: inline-block;
+            white-space: nowrap;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
         
@@ -61,6 +70,7 @@
             font-weight: 500;
             transition: color 0.3s;
             font-size: 1.1rem;
+            white-space: nowrap;
         }
         
         .nav-links a:hover {
@@ -74,28 +84,40 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><text x="20" y="55" fill="%23fff" font-family="Arial" font-size="14">🔧 Электроника</text></svg>');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><text x="50" y="55" fill="%23fff" font-family="Arial" font-size="50" text-anchor="middle" dominant-baseline="middle">🔧</text></svg>');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem;
             border-radius: 15px;
             text-align: center;
             margin-bottom: 3rem;
         }
         
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-bottom: 1.5rem;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+        }
+        
+        .hero .phone {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin: 1.5rem 0;
+            white-space: nowrap;
+            background: rgba(0,0,0,0.5);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,215,0,0.3);
         }
         
         .btn {
@@ -111,6 +133,7 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
+            white-space: nowrap;
         }
         
         .btn:hover {
@@ -120,8 +143,8 @@
         }
         
         .btn-large {
-            font-size: 1.3rem;
-            padding: 1rem 3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            padding: 0.8rem 2rem;
         }
         
         .btn-warning {
@@ -135,14 +158,14 @@
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
         
         .feature-card {
             background: white;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
@@ -166,7 +189,7 @@
         
         .services {
             background: white;
-            padding: 3rem;
+            padding: 3rem 1.5rem;
             border-radius: 15px;
             margin: 3rem 0;
         }
@@ -175,12 +198,12 @@
             text-align: center;
             margin-bottom: 2rem;
             color: #0b3d5f;
-            font-size: 2rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.5rem;
         }
         
@@ -207,14 +230,14 @@
         .about {
             background: linear-gradient(135deg, #0b3d5f 0%, #1a5f7a 100%);
             color: white;
-            padding: 3rem;
+            padding: 3rem 1.5rem;
             border-radius: 15px;
             margin: 3rem 0;
             text-align: center;
         }
         
         .about h2 {
-            font-size: 2rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
             margin-bottom: 1.5rem;
         }
         
@@ -237,14 +260,14 @@
         }
         
         .stat-number {
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 5vw, 2.5rem);
             font-weight: bold;
             color: #ffd700;
         }
         
         .contact {
             background: white;
-            padding: 3rem;
+            padding: 3rem 1.5rem;
             border-radius: 15px;
             margin: 3rem 0;
         }
@@ -253,7 +276,7 @@
             text-align: center;
             color: #0b3d5f;
             margin-bottom: 2rem;
-            font-size: 2rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
         }
         
         .contact-grid {
@@ -276,10 +299,17 @@
             padding: 1rem;
             background: white;
             border-radius: 8px;
+            flex-wrap: wrap;
         }
         
         .contact-icon {
             font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-detail {
+            flex: 1;
+            min-width: 200px;
         }
         
         .contact-detail h3 {
@@ -291,6 +321,7 @@
             color: #1a5f7a;
             text-decoration: none;
             font-weight: bold;
+            word-break: break-word;
         }
         
         .contact-detail a:hover {
@@ -337,18 +368,40 @@
         }
         
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                margin-top: 1rem;
+            nav {
                 justify-content: center;
             }
             
-            .hero h1 {
-                font-size: 2rem;
+            .logo {
+                font-size: 1.5rem;
             }
             
-            .hero p {
+            .logo span {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                justify-content: center;
+            }
+            
+            .nav-links a {
                 font-size: 1rem;
+            }
+            
+            .hero {
+                padding: 3rem 1rem;
+            }
+            
+            .hero .phone {
+                font-size: 1.3rem;
+                padding: 0.4rem 1rem;
+            }
+            
+            .btn-large {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
             }
             
             .contact-grid {
@@ -359,8 +412,37 @@
                 gap: 1.5rem;
             }
             
-            .stat-number {
-                font-size: 1.8rem;
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .logo span {
+                font-size: 1.5rem;
+            }
+            
+            .hero .phone {
+                font-size: 1.1rem;
+                white-space: normal;
+                line-height: 1.4;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-item {
+                text-align: center;
             }
         }
     </style>
@@ -385,7 +467,7 @@
         <section id="home" class="hero">
             <h1>Профессиональный ремонт электроники</h1>
             <p>Телефоны • Ноутбуки • Планшеты • Телевизоры • Игровые приставки</p>
-            <p style="font-size: 2rem; margin: 1.5rem 0;">📞 +7 (977) 779-26-97</p>
+            <div class="phone">📞 +7 (977) 779-26-97</div>
             <div>
                 <a href="tel:+79777792697" class="btn btn-large">Позвонить сейчас</a>
                 <a href="#contact" class="btn btn-large btn-warning">Заказать звонок</a>
