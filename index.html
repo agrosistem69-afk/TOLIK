@@ -292,14 +292,32 @@
         }
         
         .contact-item {
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item a {
             display: flex;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 1.5rem;
             padding: 1rem;
             background: white;
             border-radius: 8px;
-            flex-wrap: wrap;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .contact-item a:hover {
+            background: #e3f2fd;
+            border-color: #1a5f7a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item a:active {
+            transform: translateY(0);
         }
         
         .contact-icon {
@@ -309,23 +327,18 @@
         
         .contact-detail {
             flex: 1;
-            min-width: 200px;
         }
         
         .contact-detail h3 {
             color: #0b3d5f;
             margin-bottom: 0.3rem;
+            font-size: 1.2rem;
         }
         
-        .contact-detail a {
+        .contact-detail p {
             color: #1a5f7a;
-            text-decoration: none;
             font-weight: bold;
-            word-break: break-word;
-        }
-        
-        .contact-detail a:hover {
-            text-decoration: underline;
+            margin: 0;
         }
         
         .work-hours {
@@ -412,13 +425,9 @@
                 gap: 1.5rem;
             }
             
-            .contact-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .contact-icon {
-                margin-bottom: 0.5rem;
+            .contact-item a {
+                flex-direction: row;
+                text-align: left;
             }
         }
         
@@ -443,6 +452,12 @@
             
             .service-item {
                 text-align: center;
+            }
+            
+            .contact-item a {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -562,29 +577,36 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div class="contact-detail">
-                            <h3>Телефон</h3>
-                            <a href="tel:+79777792697">+7 (977) 779-26-97</a>
-                            <p>Работаем 24/7 для срочных случаев</p>
-                        </div>
+                        <a href="tel:+79777792697">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-detail">
+                                <h3>Телефон</h3>
+                                <p>+7 (977) 779-26-97</p>
+                                <small>Работаем 24/7</small>
+                            </div>
+                        </a>
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-detail">
-                            <h3>Telegram</h3>
-                            <a href="https://t.me/+79777792697">+7 (977) 779-26-97</a>
-                            <p>Быстрый ответ в Telegram</p>
-                        </div>
+                        <a href="https://t.me/+79777792697" target="_blank">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-detail">
+                                <h3>Telegram</h3>
+                                <p>+7 (977) 779-26-97</p>
+                                <small>Быстрый ответ</small>
+                            </div>
+                        </a>
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-detail">
-                            <h3>Адрес</h3>
-                            <p>г. Москва, метро Братиславская, ТЦ БУМ</p>
-                        </div>
+                        <a href="https://maps.yandex.ru/?text=Москва, метро Братиславская, ТЦ БУМ" target="_blank">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-detail">
+                                <h3>Адрес</h3>
+                                <p>м. Братиславская, ТЦ БУМ</p>
+                                <small>Москва</small>
+                            </div>
+                        </a>
                     </div>
                     
                     <div class="work-hours">
