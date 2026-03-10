@@ -358,6 +358,61 @@
             margin: 0;
         }
         
+        .social-block {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .social-title {
+            color: #0b3d5f;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.2rem;
+            background: #f0f2f5;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .social-link:hover {
+            background: #e3f2fd;
+            border-color: #1a5f7a;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .social-link.vk:hover {
+            background: #4a76a8;
+            color: white;
+        }
+        
+        .social-link.pinterest:hover {
+            background: #bd081c;
+            color: white;
+        }
+        
+        .social-icon {
+            font-size: 1.3rem;
+        }
+        
         .work-hours {
             background: #e3f2fd;
             padding: 1.5rem;
@@ -445,6 +500,14 @@
             .contact-item a {
                 flex-direction: row;
                 text-align: left;
+            }
+            
+            .social-links {
+                flex-direction: column;
+            }
+            
+            .social-link {
+                justify-content: center;
             }
         }
         
@@ -624,6 +687,23 @@
                                 <small>Москва</small>
                             </div>
                         </a>
+                    </div>
+                    
+                    <div class="social-block">
+                        <div class="social-title">Мы в соцсетях</div>
+                        <div class="social-links">
+                            <a href="#" class="social-link vk" target="_blank">
+                                <span class="social-icon">📘</span>
+                                <span>ВКонтакте</span>
+                            </a>
+                            <a href="https://ru.pinterest.com/ImMonkey2025/" class="social-link pinterest" target="_blank">
+                                <span class="social-icon">📌</span>
+                                <span>Pinterest</span>
+                            </a>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                            * ВКонтакте появится позже
+                        </p>
                     </div>
                     
                     <div class="work-hours">
