@@ -378,39 +378,45 @@
             flex-wrap: wrap;
         }
         
-        .social-link {
+        .social-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.2rem;
-            background: #f0f2f5;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
-            color: #333;
             font-weight: 500;
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            min-width: 120px;
         }
         
-        .social-link:hover {
-            background: #e3f2fd;
-            border-color: #1a5f7a;
-            transform: translateY(-2px);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .social-link.vk:hover {
+        .social-btn.vk {
             background: #4a76a8;
             color: white;
         }
         
-        .social-link.pinterest:hover {
+        .social-btn.vk:hover {
+            background: #3a5f8a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 118, 168, 0.3);
+        }
+        
+        .social-btn.pinterest {
             background: #bd081c;
             color: white;
         }
         
-        .social-icon {
-            font-size: 1.3rem;
+        .social-btn.pinterest:hover {
+            background: #9e0718;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(189, 8, 28, 0.3);
+        }
+        
+        .social-btn i {
+            font-style: normal;
+            font-size: 1.2rem;
         }
         
         .work-hours {
@@ -506,7 +512,7 @@
                 flex-direction: column;
             }
             
-            .social-link {
+            .social-btn {
                 justify-content: center;
             }
         }
@@ -692,17 +698,17 @@
                     <div class="social-block">
                         <div class="social-title">Мы в соцсетях</div>
                         <div class="social-links">
-                            <a href="#" class="social-link vk" target="_blank">
-                                <span class="social-icon">📘</span>
-                                <span>ВКонтакте</span>
+                            <a href="#" class="social-btn vk" target="_blank">
+                                <i>📘</i>
+                                <span>VK</span>
                             </a>
-                            <a href="https://ru.pinterest.com/ImMonkey2025/" class="social-link pinterest" target="_blank">
-                                <span class="social-icon">📌</span>
+                            <a href="https://ru.pinterest.com/ImMonkey2025/" class="social-btn pinterest" target="_blank">
+                                <i>📌</i>
                                 <span>Pinterest</span>
                             </a>
                         </div>
                         <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-                            * ВКонтакте появится позже
+                            * VK появится позже
                         </p>
                     </div>
                     
