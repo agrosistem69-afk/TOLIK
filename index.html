@@ -282,6 +282,50 @@
             color: #ffd700;
         }
         
+        /* Банковские реквизиты */
+        .bank-details {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            margin-top: 2rem;
+            text-align: left;
+            color: #0b3d5f;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .bank-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #0b3d5f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .bank-details h3::before {
+            content: "🏦";
+            font-size: 1.5rem;
+        }
+        
+        .bank-details p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #1e4663;
+        }
+        
+        .bank-details strong {
+            color: #0b3d5f;
+            font-weight: 600;
+        }
+        
+        .bank-details hr {
+            margin: 1rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #ffd700, transparent);
+        }
+        
         .contact {
             background: white;
             padding: 3rem 1.5rem;
@@ -527,6 +571,15 @@
             .social-btn {
                 justify-content: center;
             }
+            
+            .bank-details {
+                padding: 1rem;
+            }
+            
+            .bank-details p {
+                font-size: 0.85rem;
+                word-break: break-word;
+            }
         }
         
         @media (max-width: 480px) {
@@ -556,6 +609,10 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 0.5rem;
+            }
+            
+            .bank-details p {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -667,6 +724,21 @@
                     <div class="stat-number">97%</div>
                     <div>довольных клиентов</div>
                 </div>
+            </div>
+            
+            <!-- Банковские реквизиты -->
+            <div class="bank-details">
+                <h3>Реквизиты для оплаты</h3>
+                <p><strong>Индивидуальный предприниматель Макаров Анатолий Михайлович</strong></p>
+                <p><strong>ОГРНИП:</strong> 324210000077406</p>
+                <p><strong>ИНН:</strong> 211604380831</p>
+                <hr>
+                <p><strong>Банк:</strong> МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"</p>
+                <p><strong>БИК:</strong> 044525092</p>
+                <p><strong>к/с №:</strong> 30101810645250000092</p>
+                <p><strong>Счёт №:</strong> 40802810470010481485</p>
+                <hr>
+                <p>С уважением, Индивидуальный предприниматель Макаров Анатолий Михайлович</p>
             </div>
         </section>
 
