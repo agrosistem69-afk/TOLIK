@@ -8,596 +8,77 @@
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107223023', 'ym');
-
         ym(107223023, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/107223023" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
     <meta name="p:domain_verify" content="ba404e2cbb3ddb7cc33dd38418bbc1a0"/>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт электроники - Профессиональный сервис REMONTPRO</title>
+    <title>Ремонт электроники REMONTPRO - ИП Макаров А.М.</title>
     <meta name="description" content="Профессиональный ремонт электроники: телефоны, ноутбуки, планшеты, телевизоры. Быстро, качественно, с гарантией. Бесплатная диагностика.">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f5f5f5; color: #333; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #0b3d5f 0%, #1a5f7a 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px 20px; }
+        .logo { font-size: 1.8rem; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+        .logo span { font-size: 2rem; }
+        .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 1.1rem; }
+        .nav-links a:hover { color: #ffd700; }
+        main { max-width: 1200px; margin: 2rem auto; padding: 0 20px; }
         
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: white; padding: 4rem 1.5rem; border-radius: 15px; text-align: center; margin-bottom: 3rem; }
+        .hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero .phone { font-size: clamp(1.5rem, 4vw, 2rem); margin: 1.5rem 0; background: rgba(0,0,0,0.5); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 50px; border: 1px solid rgba(255,215,0,0.3); backdrop-filter: blur(5px); }
         
-        header {
-            background: linear-gradient(135deg, #0b3d5f 0%, #1a5f7a 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px 20px;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: nowrap;
-            white-space: nowrap;
-        }
-        
-        .logo span {
-            font-size: 2rem;
-            line-height: 1;
-        }
-        
-        .logo div {
-            display: inline-block;
-            white-space: nowrap;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 1.1rem;
-            white-space: nowrap;
-        }
-        
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><text x="50" y="55" fill="%23fff" font-family="Arial" font-size="50" text-anchor="middle" dominant-baseline="middle">🔧</text></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 4rem 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .hero h1 {
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .hero p {
-            font-size: clamp(1rem, 3vw, 1.3rem);
-            margin-bottom: 1.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero .phone {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            margin: 1.5rem 0;
-            white-space: nowrap;
-            background: rgba(0,0,0,0.5);
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,215,0,0.3);
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #ffd700;
-            color: #333;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s;
-            margin: 0.5rem;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            white-space: nowrap;
-        }
-        
-        .btn:hover {
-            background: #ffed4a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .btn-large {
-            font-size: clamp(1rem, 3vw, 1.3rem);
-            padding: 0.8rem 2rem;
-        }
-        
-        .btn-warning {
-            background: #dc3545;
-            color: white;
-        }
-        
-        .btn-warning:hover {
-            background: #c82333;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 2rem 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-card .icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card h3 {
-            color: #1a5f7a;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .services {
-            background: white;
-            padding: 3rem 1.5rem;
-            border-radius: 15px;
-            margin: 3rem 0;
-        }
-        
-        .services h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #0b3d5f;
-            font-size: clamp(1.8rem, 4vw, 2rem);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .service-item {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #1a5f7a;
-        }
-        
-        .service-item h4 {
-            color: #0b3d5f;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .price {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #28a745;
-            margin-top: 0.5rem;
-        }
-        
-        .about {
-            background: linear-gradient(135deg, #0b3d5f 0%, #1a5f7a 100%);
-            color: white;
-            padding: 3rem 1.5rem;
-            border-radius: 15px;
-            margin: 3rem 0;
-            text-align: center;
-        }
-        
-        .about h2 {
-            font-size: clamp(1.8rem, 4vw, 2rem);
-            margin-bottom: 1.5rem;
-        }
-        
-        .about p {
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-            font-size: 1.1rem;
-        }
+        .btn { display: inline-block; background: #ffd700; color: #333; padding: 0.8rem 2rem; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; margin: 0.5rem; border: none; cursor: pointer; font-size: 1rem; }
+        .btn:hover { background: #ffed4a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-warning { background: #dc3545; color: white; }
+        .btn-large { font-size: clamp(1rem, 3vw, 1.3rem); }
 
-        .requisites {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            font-size: 0.95rem;
-            text-align: left;
-            display: inline-block;
-            width: 100%;
-            max-width: 600px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
+        /* Features & Stats */
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .feature-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+        .feature-card .icon { font-size: 3rem; margin-bottom: 1rem; }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #ffd700; }
 
-        .requisites h3 {
-            color: #ffd700;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-            text-align: center;
-        }
+        /* Services */
+        .services { background: white; padding: 3rem 1.5rem; border-radius: 15px; margin: 3rem 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .service-item { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1a5f7a; }
+        .price { font-size: 1.3rem; font-weight: bold; color: #28a745; margin-top: 0.5rem; }
 
-        .requisites p {
-            margin-bottom: 0.4rem;
-            font-family: 'Courier New', Courier, monospace;
-            word-break: break-all;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            font-weight: bold;
-            color: #ffd700;
-        }
-        
-        .contact {
-            background: white;
-            padding: 3rem 1.5rem;
-            border-radius: 15px;
-            margin: 3rem 0;
-        }
-        
-        .contact h2 {
-            text-align: center;
-            color: #0b3d5f;
-            margin-bottom: 2rem;
-            font-size: clamp(1.8rem, 4vw, 2rem);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        
-        .contact-info {
-            padding: 2rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-        
-        .contact-item {
-            display: block;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-item a {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .contact-item a:hover {
-            background: #e3f2fd;
-            border-color: #1a5f7a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .contact-item a:active {
-            transform: translateY(0);
-        }
-        
-        .contact-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-        
-        .contact-detail {
-            flex: 1;
-        }
-        
-        .contact-detail h3 {
-            color: #0b3d5f;
-            margin-bottom: 0.3rem;
-            font-size: 1.2rem;
-        }
-        
-        .contact-detail p {
-            color: #1a5f7a;
-            font-weight: bold;
-            margin: 0;
-        }
-        
-        .social-block {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-        }
-        
-        .social-title {
-            color: #0b3d5f;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-            min-width: 100px;
-        }
-        
-        .social-btn.vk {
-            background: #4a76a8;
-            color: white;
-        }
-        
-        .social-btn.vk:hover {
-            background: #3a5f8a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(74, 118, 168, 0.3);
-        }
-        
-        .social-btn.pinterest {
-            background: #bd081c;
-            color: white;
-        }
-        
-        .social-btn.pinterest:hover {
-            background: #9e0718;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(189, 8, 28, 0.3);
-        }
-        
-        .vk-logo {
-            font-weight: bold;
-            font-size: 1.2rem;
-            letter-spacing: -0.5px;
-        }
-        
-        .pinterest-logo {
-            font-family: 'Arial Black', 'Helvetica Bold', 'Segoe UI Black', sans-serif;
-            font-weight: 900;
-            font-size: 1.6rem;
-            color: white;
-            line-height: 1;
-            transform: scale(1.1);
-            display: inline-block;
-            letter-spacing: -1px;
-        }
-        
-        .work-hours {
-            background: #e3f2fd;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-        }
-        
-        .work-hours h3 {
-            color: #0b3d5f;
-            margin-bottom: 0.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 2.5rem 1rem;
-            margin-top: 3rem;
-        }
+        /* About & Requisites */
+        .about { background: linear-gradient(135deg, #0b3d5f 0%, #1a5f7a 100%); color: white; padding: 3rem 1.5rem; border-radius: 15px; text-align: center; }
+        .requisites { margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.1); border-radius: 10px; text-align: left; display: inline-block; max-width: 600px; width: 100%; border: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; }
 
-        .footer-legal {
-            font-size: 0.85rem;
-            color: #999;
-            margin-top: 1rem;
-            line-height: 1.4;
-        }
-        
-        @media (max-width: 768px) {
-            nav {
-                justify-content: center;
-            }
-            
-            .logo {
-                font-size: 1.5rem;
-            }
-            
-            .logo span {
-                font-size: 1.8rem;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-                justify-content: center;
-            }
-            
-            .nav-links a {
-                font-size: 1rem;
-            }
-            
-            .hero {
-                padding: 3rem 1rem;
-            }
-            
-            .hero .phone {
-                font-size: 1.3rem;
-                padding: 0.4rem 1rem;
-            }
-            
-            .btn-large {
-                display: block;
-                width: 100%;
-                margin: 0.5rem 0;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                gap: 1.5rem;
-            }
-            
-            .contact-item a {
-                flex-direction: row;
-                text-align: left;
-            }
-            
-            .social-links {
-                flex-direction: column;
-            }
-            
-            .social-btn {
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 1.3rem;
-            }
-            
-            .logo span {
-                font-size: 1.5rem;
-            }
-            
-            .hero .phone {
-                font-size: 1.1rem;
-                white-space: normal;
-                line-height: 1.4;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-item {
-                text-align: center;
-            }
-            
-            .contact-item a {
-                flex-direction: column;
-                text-align: center;
-                gap: 0.5rem;
-            }
-        }
+        /* Contacts & Social */
+        .contact { background: white; padding: 3rem 1.5rem; border-radius: 15px; margin: 3rem 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .contact-item a { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; margin-bottom: 1rem; transition: 0.3s; }
+        .contact-item a:hover { background: #e3f2fd; transform: translateX(5px); }
+        .social-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; margin-right: 10px; }
+        .vk { background: #4a76a8; }
+        .pinterest { background: #bd081c; }
+
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+
+        footer { background: #222; color: #999; text-align: center; padding: 2rem; font-size: 0.85rem; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <span>🔧</span> 
-                <div>REMONT<span style="color: #ffd700;">PRO</span></div>
-            </div>
+            <div class="logo"><span>🔧</span> REMONT<span style="color: #ffd700;">PRO</span></div>
             <ul class="nav-links">
-                <li><a href="#home">Главная</a></li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#about">О нас</a></li>
                 <li><a href="#contact">Контакты</a></li>
@@ -606,9 +87,9 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section class="hero" id="home">
             <h1>Профессиональный ремонт электроники</h1>
-            <p>Телефоны • Ноутбуки • Планшеты • Телевизоры • Игровые приставки</p>
+            <p>Телефоны • Ноутбуки • Планшеты • Телевизоры • Приставки</p>
             <div class="phone">📞 +7 (977) 779-26-97</div>
             <div>
                 <a href="tel:+79777792697" class="btn btn-large">Позвонить сейчас</a>
@@ -617,96 +98,35 @@
         </section>
 
         <section class="features">
-            <div class="feature-card">
-                <div class="icon">⚡</div>
-                <h3>Быстрый ремонт</h3>
-                <p>70% поломок устраняем за 1-2 часа. Срочный выезд мастера</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🔧</div>
-                <h3>Качественные запчасти</h3>
-                <p>Используем только оригинальные комплектующие от проверенных поставщиков</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">💰</div>
-                <h3>Доступные цены</h3>
-                <p>Цены ниже средних по рынку. Гарантия на все работы до 1 года</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🔍</div>
-                <h3>Бесплатная диагностика</h3>
-                <p>При ремонте диагностика бесплатно. Точно определим причину поломки</p>
-            </div>
+            <div class="feature-card"><div class="icon">⚡</div><h3>Быстро</h3><p>70% поломок устраняем за 1-2 часа</p></div>
+            <div class="feature-card"><div class="icon">🔧</div><h3>Запчасти</h3><p>Только оригинальные комплектующие</p></div>
+            <div class="feature-card"><div class="icon">🔍</div><h3>Диагностика</h3><p>Бесплатно при последующем ремонте</p></div>
         </section>
 
         <section id="services" class="services">
             <h2>Наши услуги и цены</h2>
             <div class="services-grid">
-                <div class="service-item">
-                    <h4>📱 Ремонт телефонов</h4>
-                    <p>Замена экрана, аккумулятора, разъема зарядки, после падения в воду</p>
-                    <div class="price">от 1500 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>💻 Ремонт ноутбуков</h4>
-                    <p>Замена матрицы, клавиатуры, чистка от пыли, ремонт материнской платы</p>
-                    <div class="price">от 2000 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>📺 Ремонт телевизоров</h4>
-                    <p>Замена подсветки, блока питания, матрицы, настройка</p>
-                    <div class="price">от 2500 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>🎮 Ремонт приставок</h4>
-                    <p>PlayStation, Xbox, Nintendo: перепайка, чистка, замена дисковода</p>
-                    <div class="price">от 2000 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>🖥️ Ремонт планшетов</h4>
-                    <p>Замена стекла, дисплея, аккумулятора, кнопок</p>
-                    <div class="price">от 1800 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>⏰ Ремонт умных часов</h4>
-                    <p>Замена экрана, аккумулятора, ремонт после воды</p>
-                    <div class="price">от 1500 ₽</div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="#contact" class="btn btn-large">Узнать точную стоимость</a>
+                <div class="service-item"><h4>📱 Смартфоны</h4><p>Замена экранов и АКБ</p><div class="price">от 1500 ₽</div></div>
+                <div class="service-item"><h4>💻 Ноутбуки</h4><p>Чистка и ремонт плат</p><div class="price">от 2000 ₽</div></div>
+                <div class="service-item"><h4>📺 Телевизоры</h4><p>Подсветка и блоки питания</p><div class="price">от 2500 ₽</div></div>
+                <div class="service-item"><h4>🎮 Приставки</h4><p>Чистка и замена стиков</p><div class="price">от 2000 ₽</div></div>
             </div>
         </section>
 
         <section id="about" class="about">
-            <h2>О нашем сервисе</h2>
-            <p>Мы занимаемся ремонтом электроники более 8 лет. За это время починили более 5000 устройств. Наши мастера проходят регулярное обучение и имеют сертификаты от производителей.</p>
-            <p>Работаем с любой техникой: от iPhone до игровых приставок. Даем гарантию на все виды работ и запчасти.</p>
+            <h2>8 лет опыта и 5000+ отремонтированных устройств</h2>
+            <div class="stats">
+                <div class="stat-item"><div class="stat-number">8+</div><div>лет опыта</div></div>
+                <div class="stat-item"><div class="stat-number">5000+</div><div>устройств</div></div>
+                <div class="stat-item"><div class="stat-number">97%</div><div>отзывов</div></div>
+            </div>
             
             <div class="requisites">
-                <h3>Реквизиты компании</h3>
+                <h3 style="color: #ffd700; margin-bottom: 10px; text-align: center;">Юридическая информация:</h3>
                 <p><strong>ИП Макаров Анатолий Михайлович</strong></p>
-                <p>ИНН: 211604380831</p>
-                <p>ОГРНИП: 324210000077406</p>
+                <p>ИНН: 211604380831 | ОГРНИП: 324210000077406</p>
                 <p>Банк: МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"</p>
-                <p>БИК: 044525092</p>
-                <p>к/с №: 30101810645250000092</p>
-                <p>Счёт №: 40802810470010481485</p>
-            </div>
-
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">8+</div>
-                    <div>лет опыта</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5000+</div>
-                    <div>устройств</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">97%</div>
-                    <div>отзывов 5★</div>
-                </div>
+                <p>БИК: 044525092 | Счёт: 40802810470010481485</p>
             </div>
         </section>
 
@@ -715,83 +135,35 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <a href="tel:+79777792697">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-detail">
-                                <h3>Телефон</h3>
-                                <p>+7 (977) 779-26-97</p>
-                                <small>Работаем 24/7</small>
-                            </div>
-                        </a>
+                        <a href="tel:+79777792697"><span>📞</span><div><h3>Телефон</h3><p>+7 (977) 779-26-97</p><small>Работаем 24/7</small></div></a>
                     </div>
-                    
                     <div class="contact-item">
-                        <a href="https://t.me/+79777792697" target="_blank">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-detail">
-                                <h3>Telegram</h3>
-                                <p>+7 (977) 779-26-97</p>
-                                <small>Быстрый ответ</small>
-                            </div>
-                        </a>
+                        <a href="https://maps.yandex.ru/?text=Москва, ТЦ БУМ" target="_blank"><span>📍</span><div><h3>Адрес</h3><p>м. Братиславская, ТЦ БУМ</p></div></a>
                     </div>
-                    
-                    <div class="contact-item">
-                        <a href="https://maps.yandex.ru/?text=Москва, метро Братиславская, ТЦ БУМ" target="_blank">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-detail">
-                                <h3>Адрес</h3>
-                                <p>м. Братиславская, ТЦ БУМ</p>
-                                <small>Москва, ул. Перерва, 43к1</small>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="social-block">
-                        <div class="social-title">Мы в соцсетях</div>
-                        <div class="social-links">
-                            <a href="#" class="social-btn vk">
-                                <span class="vk-logo">VK</span>
-                            </a>
-                            <a href="https://ru.pinterest.com/ImMonkey2025/" class="social-btn pinterest">
-                                <span class="pinterest-logo">P</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="work-hours">
-                        <h3>⏰ Режим работы</h3>
-                        <p>Пн-Пт: 10:00 - 20:00</p>
-                        <p>Сб-Вс: 11:00 - 18:00</p>
-                        <p><strong>Срочный вызов: круглосуточно</strong></p>
+                    <div style="margin-top: 20px;">
+                        <p style="font-weight: bold; margin-bottom: 10px;">Мы в соцсетях:</p>
+                        <a href="#" class="social-btn vk">VK</a>
+                        <a href="https://ru.pinterest.com/ImMonkey2025/" class="social-btn pinterest">Pinterest</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
-                    <h3>Оставьте заявку</h3>
-                    <p>Мы перезвоним в течение 15 минут</p>
-                    
                     <form action="https://formspree.io/f/mgolbeka" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                        </div>
+                        <input type="hidden" name="utm_source" id="utm_source" value="direct">
+                        <input type="hidden" name="utm_medium" id="utm_medium" value="none">
+                        <input type="hidden" name="utm_campaign" id="utm_campaign" value="none">
+
+                        <div class="form-group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+                        <div class="form-group"><input type="tel" name="phone" placeholder="Ваш телефон" required></div>
                         <div class="form-group">
                             <select name="device">
                                 <option value="Телефон">Телефон</option>
                                 <option value="Ноутбук">Ноутбук</option>
-                                <option value="Планшет">Планшет</option>
                                 <option value="Телевизор">Телевизор</option>
-                                <option value="Приставка">Приставка</option>
-                                <option value="Другое">Другое</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <textarea name="problem" placeholder="Опишите проблему..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-large" style="width: 100%;">Отправить заявку</button>
+                        <div class="form-group"><textarea name="message" placeholder="Описание проблемы"></textarea></div>
+                        <button type="submit" class="btn btn-warning" style="width: 100%;">Отправить заявку</button>
                     </form>
                 </div>
             </div>
@@ -799,14 +171,16 @@
     </main>
 
     <footer>
-        <p>© 2024 REMONTPRO - Профессиональный ремонт электроники</p>
-        <p>Работаем по Москве и области</p>
-        <div class="footer-legal">
-            ИП Макаров Анатолий Михайлович<br>
-            ИНН 211604380831 | ОГРНИП 324210000077406<br>
-            Банк: МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"<br>
-            Все права защищены
-        </div>
+        <p>© 2026 REMONTPRO | ИП Макаров А.М. | ИНН 211604380831</p>
     </footer>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            ['utm_source', 'utm_medium', 'utm_campaign'].forEach(p => {
+                if (params.has(p)) document.getElementById(p).value = params.get(p);
+            });
+        };
+    </script>
 </body>
 </html>
