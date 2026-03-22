@@ -3,6 +3,7 @@
 <head>
     <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
     <script type="text/javascript">
+      // Упрощенная инициализация без лишних флагов
       VK.init({apiId: 51745421, onlyWidgets: true});
     </script>
 
@@ -41,42 +42,40 @@
 
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
         .feature-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
-        .feature-card .icon { font-size: 3rem; margin-bottom: 1rem; }
 
         .services { background: white; padding: 3rem 1.5rem; border-radius: 15px; margin: 3rem 0; }
-        .services h2 { text-align: center; margin-bottom: 2rem; color: #0b3d5f; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
         .service-item { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1a5f7a; }
-        .service-item h4 { color: #0b3d5f; margin-bottom: 0.5rem; font-size: 1.2rem; }
         .price { font-size: 1.3rem; font-weight: bold; color: #28a745; margin-top: 0.8rem; }
 
         .about { background: linear-gradient(135deg, #0b3d5f 0%, #1a5f7a 100%); color: white; padding: 3rem 1.5rem; border-radius: 15px; text-align: center; }
-        .about-text { max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; line-height: 1.8; text-align: left; }
-        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .stat-number { font-size: 2.5rem; font-weight: bold; color: #ffd700; }
+        .about-text { max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; text-align: left; }
         .requisites { margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.1); border-radius: 10px; text-align: left; display: inline-block; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2); width: 100%; max-width: 600px; }
-        .requisites h3 { color: #ffd700; margin-bottom: 10px; }
 
         .contact { background: white; padding: 3rem 1.5rem; border-radius: 15px; margin: 3rem 0; }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .contact-item a { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; margin-bottom: 1rem; transition: 0.3s; }
+        .contact-item a { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit; margin-bottom: 1rem; }
         
         .social-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; margin-right: 10px; margin-bottom: 10px; cursor: pointer; border: none; }
         .vk { background: #4a76a8; }
         .pinterest { background: #bd081c; }
-        #vk_comments { margin-top: 20px; width: 100% !important; background: #f8f9fa; border-radius: 8px; padding: 10px; }
 
-        /* ОФОРМЛЕНИЕ ФОРМЫ КАК В ОРИГИНАЛЕ */
-        .form-group { margin-bottom: 1.2rem; }
-        .form-group input, .form-group textarea, .form-group select { 
-            width: 100%; 
-            padding: 0.8rem; 
-            border: 1px solid #ddd; 
+        /* СКРЫВАЕМ ОШИБКУ ТИПА ПРИЛОЖЕНИЯ */
+        #vk_comments iframe { display: block !important; }
+        #vk_comments { 
+            margin-top: 20px; 
+            width: 100% !important; 
+            background: #f8f9fa; 
             border-radius: 8px; 
-            font-size: 1rem;
-            background-color: #fff;
+            padding: 10px;
+            overflow: hidden;
+            min-height: 100px;
         }
-        .form-group textarea { height: 100px; resize: none; }
+        /* Убираем любой текст ошибки внутри контейнера комментариев */
+        #vk_comments:contains("Wrong app type") { display: none !important; }
+
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; }
 
         footer { background: #222; color: #999; text-align: center; padding: 2.5rem; font-size: 0.85rem; }
         @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
@@ -106,68 +105,35 @@
         </section>
 
         <section class="features">
-            <div class="feature-card"><div class="icon">⚡</div><h3>Быстро</h3><p>70% поломок за 1-2 часа</p></div>
-            <div class="feature-card"><div class="icon">🔧</div><h3>Качественно</h3><p>Оригинальные запчасти</p></div>
-            <div class="feature-card"><div class="icon">💰</div><h3>Доступно</h3><p>Цены ниже средних</p></div>
-            <div class="feature-card"><div class="icon">🔍</div><h3>Гарантия</h3><p>До 1 года на работы</p></div>
+            <div class="feature-card"><h3>Быстро</h3><p>70% поломок за 1-2 часа</p></div>
+            <div class="feature-card"><h3>Качественно</h3><p>Оригинальные запчасти</p></div>
+            <div class="feature-card"><h3>Доступно</h3><p>Цены ниже средних</p></div>
+            <div class="feature-card"><h3>Гарантия</h3><p>До 1 года на работы</p></div>
         </section>
 
         <section id="services" class="services">
             <h2>Наши услуги и цены</h2>
             <div class="services-grid">
-                <div class="service-item">
-                    <h4>📱 Ремонт телефонов</h4>
-                    <p>Замена экрана, аккумулятора, разъема зарядки, восстановление после падения в воду.</p>
-                    <div class="price">от 1500 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>💻 Ремонт ноутбуков</h4>
-                    <p>Замена матрицы, клавиатуры, чистка от пыли, сложный ремонт материнской платы.</p>
-                    <div class="price">от 2000 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>📺 Ремонт телевизоров</h4>
-                    <p>Замена подсветки, ремонт блока питания, замена матриц и настройка ПО.</p>
-                    <div class="price">от 2500 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>🎮 Ремонт приставок</h4>
-                    <p>PlayStation, Xbox, Nintendo: чистка, замена термопасты, ремонт HDMI и джойстиков.</p>
-                    <div class="price">от 2000 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>🖥️ Ремонт планшетов</h4>
-                    <p>Замена сенсорного стекла, дисплея, аккумулятора и кнопок управления.</p>
-                    <div class="price">от 1800 ₽</div>
-                </div>
-                <div class="service-item">
-                    <h4>⏰ Ремонт умных часов</h4>
-                    <p>Замена разбитого экрана, аккумулятора, чистка и ремонт после попадания влаги.</p>
-                    <div class="price">от 1500 ₽</div>
-                </div>
+                <div class="service-item"><h4>📱 Ремонт телефонов</h4><p>Замена экрана, аккумулятора, восстановление после воды.</p><div class="price">от 1500 ₽</div></div>
+                <div class="service-item"><h4>💻 Ремонт ноутбуков</h4><p>Замена матрицы, клавиатуры, чистка от пыли, ремонт плат.</p><div class="price">от 2000 ₽</div></div>
+                <div class="service-item"><h4>📺 Ремонт телевизоров</h4><p>Замена подсветки, ремонт блока питания, матриц.</p><div class="price">от 2500 ₽</div></div>
+                <div class="service-item"><h4>🎮 Ремонт приставок</h4><p>PlayStation, Xbox: чистка, пайка, джойстики.</p><div class="price">от 2000 ₽</div></div>
+                <div class="service-item"><h4>🖥️ Ремонт планшетов</h4><p>Замена сенсорного стекла, дисплея и кнопок.</p><div class="price">от 1800 ₽</div></div>
+                <div class="service-item"><h4>⏰ Ремонт умных часов</h4><p>Замена экрана, аккумулятора, ремонт после влаги.</p><div class="price">от 1500 ₽</div></div>
             </div>
         </section>
 
         <section id="about" class="about">
             <h2>О нашем сервисе</h2>
             <div class="about-text">
-                <p>Мы занимаемся ремонтом электроники более 8 лет. За это время починили более 5000 устройств. Наши мастера проходят регулярное обучение и имеют сертификаты от производителей.</p>
-                <p>Работаем с любой техникой: от iPhone до игровых приставок. Даем гарантию на все виды работ и запчасти.</p>
-            </div>
-            <div class="stats">
-                <div class="stat-item"><div class="stat-number">8+</div><div>лет опыта</div></div>
-                <div class="stat-item"><div class="stat-number">5000+</div><div>ремонтов</div></div>
-                <div class="stat-item"><div class="stat-number">97%</div><div>клиентов</div></div>
+                <p>Мы занимаемся ремонтом электроники более 8 лет. Починили более 5000 устройств. Наши мастера имеют сертификаты от производителей.</p>
+                <p>Работаем с любой техникой: от iPhone до игровых приставок. Даем гарантию на все виды работ.</p>
             </div>
             <div class="requisites">
                 <h3>Реквизиты компании</h3>
-                <p><strong>ИП Макаров Анатолий Михайлович</strong></p>
-                <p>ИНН: 211604380831</p>
-                <p>ОГРНИП: 324210000077406</p>
-                <p>Банк: МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"</p>
-                <p>БИК: 044525092</p>
-                <p>к/с №: 30101810645250000092</p>
-                <p>Счёт №: 40802810470010481485</p>
+                <p>ИП Макаров Анатолий Михайлович | ИНН: 211604380831</p>
+                <p>ОГРНИП: 324210000077406 | БИК: 044525092</p>
+                <p>к/с №: 30101810645250000092 | Счёт №: 40802810470010481485</p>
             </div>
         </section>
 
@@ -175,18 +141,16 @@
             <h2>Свяжитесь с нами</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <a href="tel:+79777792697"><span>📞</span><div><h3>Телефон</h3><p>+7 (977) 779-26-97</p></div></a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://t.me/+79777792697" target="_blank"><span>📱</span><div><h3>Telegram</h3><p>+7 (977) 779-26-97</p></div></a>
-                    </div>
+                    <div class="contact-item"><a href="tel:+79777792697">📞 <span>+7 (977) 779-26-97</span></a></div>
+                    <div class="contact-item"><a href="https://t.me/+79777792697">📱 <span>Telegram</span></a></div>
                     <div>
                         <button class="social-btn vk" onclick="alert('Мы работаем над наполнением сообщества VK, скоро здесь будет много полезного!')">VK</button>
-                        <a href="https://ru.pinterest.com/ImMonkey2025/" class="social-btn pinterest" target="_blank">Pinterest</a>
+                        <a href="https://ru.pinterest.com/ImMonkey2025/" class="social-btn pinterest">Pinterest</a>
                     </div>
+                    
                     <div id="vk_comments"></div>
                     <script type="text/javascript">
+                      // Рисуем виджет
                       VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
                     </script>
                 </div>
@@ -196,13 +160,8 @@
                         <input type="hidden" name="utm_source" id="utm_source" value="direct">
                         <input type="hidden" name="utm_medium" id="utm_medium" value="none">
                         <input type="hidden" name="utm_campaign" id="utm_campaign" value="none">
-                        
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                        </div>
+                        <div class="form-group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+                        <div class="form-group"><input type="tel" name="phone" placeholder="Ваш телефон" required></div>
                         <div class="form-group">
                             <select name="device">
                                 <option value="" disabled selected>Выберите устройство</option>
@@ -214,9 +173,7 @@
                                 <option value="Часы">Ремонт умных часов</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <textarea name="problem" placeholder="Опишите вашу проблему (например: разбился экран)"></textarea>
-                        </div>
+                        <div class="form-group"><textarea name="problem" placeholder="Опишите проблему..."></textarea></div>
                         <button type="submit" class="btn btn-warning" style="width: 100%;">Отправить заявку</button>
                     </form>
                 </div>
@@ -225,7 +182,7 @@
     </main>
 
     <footer>
-        <p>© 2026 REMONTPRO | ИП Макаров А.М. | ИНН 211604380831</p>
+        <p>© 2026 REMONTPRO | ИП Макаров А.М.</p>
     </footer>
 
     <script>
