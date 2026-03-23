@@ -106,22 +106,17 @@
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 6rem 2rem;
+            padding: 80px 20px;
             border-radius: 15px;
             text-align: center;
             margin-bottom: 3rem;
-            min-height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
         }
         
         .hero h1 {
             font-size: clamp(1.8rem, 5vw, 2.8rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            max-width: 800px;
         }
         
         .hero p {
@@ -543,8 +538,7 @@
             }
             
             .hero {
-                padding: 4rem 1rem;
-                min-height: 350px;
+                padding: 60px 15px;
             }
             
             .hero .phone {
@@ -600,12 +594,11 @@
             }
             
             .hero {
-                padding: 3rem 1rem;
-                min-height: 300px;
+                padding: 50px 15px;
             }
             
             .hero .phone {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 white-space: nowrap;
             }
             
@@ -851,7 +844,6 @@
 
     <!-- Скрипт для отслеживания UTM-меток и источника заявок -->
     <script>
-    // Сохраняем UTM-метки из URL в localStorage
     (function() {
         const urlParams = new URLSearchParams(window.location.search);
         const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
@@ -869,7 +861,6 @@
         }
     })();
 
-    // Добавляем скрытое поле в форму и заполняем его перед отправкой
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.querySelector('form');
         if (form) {
