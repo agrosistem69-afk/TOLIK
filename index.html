@@ -106,16 +106,22 @@
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 4rem 1.5rem;
+            padding: 6rem 2rem;
             border-radius: 15px;
             text-align: center;
             margin-bottom: 3rem;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .hero h1 {
             font-size: clamp(1.8rem, 5vw, 2.8rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            max-width: 800px;
         }
         
         .hero p {
@@ -537,12 +543,14 @@
             }
             
             .hero {
-                padding: 3rem 1rem;
+                padding: 4rem 1rem;
+                min-height: 350px;
             }
             
             .hero .phone {
                 font-size: 1.3rem;
                 padding: 0.4rem 1rem;
+                white-space: nowrap;
             }
             
             .btn-large {
@@ -591,10 +599,14 @@
                 font-size: 1.5rem;
             }
             
+            .hero {
+                padding: 3rem 1rem;
+                min-height: 300px;
+            }
+            
             .hero .phone {
                 font-size: 1.1rem;
-                white-space: normal;
-                line-height: 1.4;
+                white-space: nowrap;
             }
             
             .features {
@@ -861,7 +873,6 @@
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.querySelector('form');
         if (form) {
-            // Создаём скрытое поле, если его ещё нет
             let hiddenField = form.querySelector('input[name="utm_data"]');
             if (!hiddenField) {
                 hiddenField = document.createElement('input');
@@ -870,7 +881,6 @@
                 form.appendChild(hiddenField);
             }
             
-            // Заполняем поле данными перед отправкой
             form.addEventListener('submit', function() {
                 const utmData = localStorage.getItem('utm_data');
                 if (utmData) {
