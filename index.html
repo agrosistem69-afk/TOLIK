@@ -101,9 +101,10 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><text x="50" y="55" fill="%23fff" font-family="Arial" font-size="50" text-anchor="middle" dominant-baseline="middle">🔧</text></svg>');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image_8015909_20260323_153533_908913.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             color: white;
             padding: 4rem 1.5rem;
             border-radius: 15px;
@@ -282,7 +283,6 @@
             color: #ffd700;
         }
         
-        /* Банковские реквизиты */
         .bank-details {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -726,7 +726,6 @@
                 </div>
             </div>
             
-            <!-- Банковские реквизиты -->
             <div class="bank-details">
                 <h3>Реквизиты для оплаты</h3>
                 <p><strong>Индивидуальный предприниматель Макаров Анатолий Михайлович</strong></p>
@@ -736,6 +735,7 @@
                 <p><strong>Банк:</strong> МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"</p>
                 <p><strong>БИК:</strong> 044525092</p>
                 <hr>
+                <p>Реквизиты для оплаты предоставляются после согласования заказа.</p>
                 <p>С уважением, Индивидуальный предприниматель Макаров Анатолий Михайлович</p>
             </div>
         </section>
@@ -836,5 +836,49 @@
         <p>Работаем по всей Москве и области</p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">Все права защищены</p>
     </footer>
+
+    <!-- Скрипт для отслеживания UTM-меток и источника заявок -->
+    <script>
+    // Сохраняем UTM-метки из URL в localStorage
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+        const utmData = {};
+        
+        utmParams.forEach(param => {
+            const value = urlParams.get(param);
+            if (value) {
+                utmData[param] = value;
+            }
+        });
+        
+        if (Object.keys(utmData).length > 0) {
+            localStorage.setItem('utm_data', JSON.stringify(utmData));
+        }
+    })();
+
+    // Добавляем скрытое поле в форму и заполняем его перед отправкой
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        if (form) {
+            // Создаём скрытое поле, если его ещё нет
+            let hiddenField = form.querySelector('input[name="utm_data"]');
+            if (!hiddenField) {
+                hiddenField = document.createElement('input');
+                hiddenField.type = 'hidden';
+                hiddenField.name = 'utm_data';
+                form.appendChild(hiddenField);
+            }
+            
+            // Заполняем поле данными перед отправкой
+            form.addEventListener('submit', function() {
+                const utmData = localStorage.getItem('utm_data');
+                if (utmData) {
+                    hiddenField.value = utmData;
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>
