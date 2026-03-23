@@ -101,16 +101,14 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image_8015909_20260323_153533_908913.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><text x="50" y="55" fill="%23fff" font-family="Arial" font-size="50" text-anchor="middle" dominant-baseline="middle">🔧</text></svg>');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             color: white;
-            padding: 80px 20px;
+            padding: 4rem 1.5rem;
             border-radius: 15px;
             text-align: center;
             margin-bottom: 3rem;
-            width: 100%;
         }
         
         .hero h1 {
@@ -284,6 +282,7 @@
             color: #ffd700;
         }
         
+        /* Банковские реквизиты */
         .bank-details {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -538,13 +537,12 @@
             }
             
             .hero {
-                padding: 60px 15px;
+                padding: 3rem 1rem;
             }
             
             .hero .phone {
                 font-size: 1.3rem;
                 padding: 0.4rem 1rem;
-                white-space: nowrap;
             }
             
             .btn-large {
@@ -593,13 +591,10 @@
                 font-size: 1.5rem;
             }
             
-            .hero {
-                padding: 50px 15px;
-            }
-            
             .hero .phone {
-                font-size: 1.2rem;
-                white-space: nowrap;
+                font-size: 1.1rem;
+                white-space: normal;
+                line-height: 1.4;
             }
             
             .features {
@@ -731,6 +726,7 @@
                 </div>
             </div>
             
+            <!-- Банковские реквизиты -->
             <div class="bank-details">
                 <h3>Реквизиты для оплаты</h3>
                 <p><strong>Индивидуальный предприниматель Макаров Анатолий Михайлович</strong></p>
@@ -740,7 +736,6 @@
                 <p><strong>Банк:</strong> МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"</p>
                 <p><strong>БИК:</strong> 044525092</p>
                 <hr>
-                <p>Реквизиты для оплаты предоставляются после согласования заказа.</p>
                 <p>С уважением, Индивидуальный предприниматель Макаров Анатолий Михайлович</p>
             </div>
         </section>
@@ -841,45 +836,5 @@
         <p>Работаем по всей Москве и области</p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">Все права защищены</p>
     </footer>
-
-    <!-- Скрипт для отслеживания UTM-меток и источника заявок -->
-    <script>
-    (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-        const utmData = {};
-        
-        utmParams.forEach(param => {
-            const value = urlParams.get(param);
-            if (value) {
-                utmData[param] = value;
-            }
-        });
-        
-        if (Object.keys(utmData).length > 0) {
-            localStorage.setItem('utm_data', JSON.stringify(utmData));
-        }
-    })();
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('form');
-        if (form) {
-            let hiddenField = form.querySelector('input[name="utm_data"]');
-            if (!hiddenField) {
-                hiddenField = document.createElement('input');
-                hiddenField.type = 'hidden';
-                hiddenField.name = 'utm_data';
-                form.appendChild(hiddenField);
-            }
-            
-            form.addEventListener('submit', function() {
-                const utmData = localStorage.getItem('utm_data');
-                if (utmData) {
-                    hiddenField.value = utmData;
-                }
-            });
-        }
-    });
-    </script>
 </body>
 </html>
